@@ -1,39 +1,30 @@
 
 public class Rectangle {
-	private double width;
-	private double height;
-	private static String color;
 	
+	private int length;
+	private int width;
 	
 	public Rectangle() {
+		length = 1;
 		width = 1;
-		height = 1;
-		color = "color"; }
+	}
 	
-	public Rectangle(double width, double height) {
-		this.width = width;
-		this.height = height;
-		color = "color"; }
+	public Rectangle(int l, int w) {
+		length = l;
+		width = w;
+	}
 	
-	
-	public double getWidth() {
-		return width; }
-	public double getHeight() {
-		return height; }
-	public static String getColor() {
-		return color; }
-	
-	
-	public void setWidth(double width) {
-		this.width = width; }
-	public void setHeight(double height) {
-		this.height = height; }
-	public static void setColor(String newColor) {
-		color = newColor; }
-	
-	
-	public double getArea() {
-		return width * height; }
-	public double getPerimeter() {
-		return 2*width + 2*height; }
+	public void draw() {
+		for (int i = 0; i < length; i++) {
+				for (int j = 0; j < width; j++) 
+					System.out.print("* ");
+				System.out.println();
+			}	
+			System.out.println();
+		}
+		
+		public int area() {
+			return length * width;
+		}
+
 }
